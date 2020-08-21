@@ -6,8 +6,8 @@
 #include <FS.h>
 #define relayPin D6
 
-const char* ssid = "TurkTelekom_Z9EM7";
-const char* password ="1E5909eDc2257";
+const char* ssid = "SSID_NAME";
+const char* password ="SSID_PASS";
 
 AsyncWebServer server(80);
 
