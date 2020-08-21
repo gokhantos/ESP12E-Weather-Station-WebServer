@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ESP8266 Weather Station</title>  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    </head>
+   
+    <style>
+       h1{
+            color:white;
+        }
+        p{
+            opacity:0.5;
+            color:white;
+        }
+        .jumbotron{
+            padding-top: 20px;
+            padding-bottom:0px;
+            height:150px;
+            margin-bottom: 0px;
+            background-color:darkslategray;
+            border-bottom: 1px solid #ddd;
+        }
+        .navbar{
+            background-color:dimgray;
+            border-bottom: 1px solid #ddd;
+        }
+        .container{
+            padding-top: 20px;
+        }
+        p1{
+            color: darkslategray;
+            padding-right: 15px;
+              margin: 18px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+        }
+   
+    </style>
+   
+    <body>
+        <body style="background-color:aquamarine;">
+    <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">ESP8266 Weather Station</h1>
+    <p class="lead">ESP8266 WebServer to check humidity and temperature of the room.</p>
+  </div>
+</div>
+       
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" style="color:bisque" href="/">Home</a>
+ 
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" style="color:bisque" href="/temperature">Temperature</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" style="color:bisque" href="/humidity">Humidity</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" style="color:bisque" href="/relaymodule">Relay Module</a>
+      </li>
+      </ul>
+  </div>
+</nav>
+            <div class="container">
+                <div class="row">
+        <p1><strong> GPIO state:  %STATE%</strong></p1>
+        <a href="/on">
+      <button type="button" class="btn btn-primary btn-dark">RELAY ON</button>
+       </a>
+        <p1></p1>
+        <a href="/off">
+      <button type="button" class="btn btn-primary btn-dark">RELAY OFF</button>
+       </a>
+                </div>
+                </div>
+    </body>
+</html>
